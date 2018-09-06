@@ -1,0 +1,39 @@
+version: '2'
+
+volumes:
+  craftcms-data:
+  postgresql-data:
+  craftcms-logs:
+
+services:
+  web:
+    build: .
+    image: wyveo/craftcms-docker:latest
+    ports:
+      - 80:80
+    volumes:
+      - craftcms-logs:/var/log
+      - craftcms-data:/usr/share/nginx
+    links:
+      - postgres
+    environment:
+      LANG: C.UTF-8
+      DB_DRIVER: pgsql
+      DB_SERVER: postgres
+      DB_DATABASE: craft3
+      DB_PASSWORD: secret
+      PGPASSWORD: secret
+      DB_SCHEMA: public
+      DB_PORT: '5432'
+      DB_USER: craft3
+      LANG: C.UTF-8
+
+  postgres:
+    image: postgres:10.5
+    environment:
+      POSTGRES_USER: craft3
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: craft3
+      POSTGRES_INITDB_ARGS: "-E UTF8"
+    volumes:
+      - postgresql-data:/var/lib/postgresql/data
