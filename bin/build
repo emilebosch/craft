@@ -1,7 +1,4 @@
 #!/usr/bin/env sh
-# These files are added by the post receive hook
-# from git. Since we're not in a git repo
-
 REGISTRY="quay.io/leaplines"
 
 BRANCH=`cat BRANCH`
