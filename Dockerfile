@@ -16,6 +16,6 @@ ADD ./default.conf /etc/nginx/conf.d/default.conf
 
 
 ADD .env.sample 	        /usr/share/nginx/.env
-ADD ./config 			        /usr/share/nginx/config
+ADD ./craft/config 			  /usr/share/nginx/config
 RUN chown -Rf nginx:nginx /usr/share/nginx/
 EXPOSE 80
