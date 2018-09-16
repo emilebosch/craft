@@ -1,10 +1,14 @@
 <?php
 $databaseUrl = parse_url(getenv('DATABASE_URL'));
 
-return array(
-  'server' => $databaseUrl['host'],
-  'port' => $databaseUrl['port'],
-  'user' => $databaseUrl['user'],
-  'password' => $databaseUrl['pass'],
-  'database' => substr($databaseUrl['path'], 1)
-);
+return [
+    'driver' => 'pgsql',
+    'server' => $databaseUrl['host'],
+    'user' =>  $databaseUrl['user'],
+    'password' => $databaseUrl['pass'],
+    'database' => substr($databaseUrl['path'], 1),
+    'schema' => 'public',
+    'tablePrefix' => '',
+    'port' => $databaseUrl['port']
+];
+?>
