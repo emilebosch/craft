@@ -6,6 +6,5 @@ return array(
   'port' => $databaseUrl['port'],
   'user' => $databaseUrl['user'],
   'password' => $databaseUrl['pass'],
-  'database' => substr($databaseUrl['path'], 1),
-  'tablePrefix' => 'craft'
+  'database' => substr($databaseUrl['path'], 1)
 );
