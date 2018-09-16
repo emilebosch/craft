@@ -15,4 +15,5 @@ RUN composer create-project craftcms/craft /usr/share/nginx/
 ADD .env.sample 	                         /usr/share/nginx/.env
 ADD ./craft/config 			                   /usr/share/nginx/config
 RUN chown -Rf nginx:nginx                  /usr/share/nginx/
+
 EXPOSE 80
