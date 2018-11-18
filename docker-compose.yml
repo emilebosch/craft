@@ -17,15 +17,7 @@ services:
     links:
       - postgres
     environment:
-      LANG: C.UTF-8
-      DB_DRIVER: pgsql
-      DB_SERVER: postgres
-      DB_DATABASE: craft3
-      DB_PASSWORD: secret
-      PGPASSWORD: secret
-      DB_SCHEMA: public
-      DB_PORT: '5432'
-      DB_USER: craft3
+      DATABASE_URL: postgresql://craft3:secret@postgres/craft3            
       LANG: C.UTF-8
 
   postgres:
