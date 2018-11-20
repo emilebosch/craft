@@ -1,0 +1,1 @@
+ docker-compose run web bash -c "pg_dump -c \$DATABASE_URL" > backup
