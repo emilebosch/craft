@@ -1,5 +1,4 @@
 version: '2'
-
 volumes:
   craftcms-data:
   postgresql-data:
@@ -17,7 +16,7 @@ services:
     links:
       - postgres
     environment:
-      DATABASE_URL: postgresql://craft3:secret@postgres/craft3            
+      DATABASE_URL: postgresql://craft3:secret@postgres/craft3
       LANG: C.UTF-8
 
   postgres:

@@ -8,7 +8,7 @@ docker-compose up -d
 open http://localhost:6060/?p=admin/install
 ```
 
-To backup an environement
+To backup an environment
 
 ```
 ./bin/backup
