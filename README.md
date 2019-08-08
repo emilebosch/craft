@@ -19,3 +19,7 @@ To restore the environment
 ```
 ./bin/restore
 ```
+
+## Thanks
+
+Inspired by https://github.com/wyveo/craftcms-docker

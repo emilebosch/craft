@@ -11,7 +11,7 @@ ADD ./default.conf /etc/nginx/conf.d/default.conf
 # Create Craft project
 
 RUN composer create-project craftcms/craft /usr/share/nginx/
-ADD ./craft/config /usr/share/nginx/config
+ADD config /usr/share/nginx/config
 RUN chown -Rf nginx:nginx /usr/share/nginx/
 
 EXPOSE 80

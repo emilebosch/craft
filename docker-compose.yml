@@ -3,11 +3,10 @@ volumes:
   craftcms-data:
   postgresql-data:
   craftcms-logs:
-
 services:
   web:
-    build: .
-    image: wyveo/craftcms-docker:latest
+    build: craft
+    image: craftcms:latest
     ports:
       - 6060:80
     volumes:
